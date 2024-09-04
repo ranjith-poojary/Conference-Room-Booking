@@ -1,0 +1,129 @@
+/* Container for the entire page */
+.home-container {
+    position: relative; /* Make sure the overlay is positioned relative to this container */
+    z-index: 1; /* Ensure content is above the background image */
+}
+
+/* Background Image */
+body {
+    background: url('C:\Users\Admin\Downloads\imge1.jpg') no-repeat center center fixed; 
+    background-size: cover; /* Cover the entire viewport */
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Overlay with Blur Effect */
+.home-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* White overlay with some opacity */
+    backdrop-filter: blur(8px); /* Apply blur effect */
+    z-index: -1; /* Place the overlay behind the content */
+}
+
+/* Rest of your styles */
+
+.user-details {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.75em;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.room-slots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.room-slot {
+    background-color: #fff; /* White background for each room slot */
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 200px; /* Fixed width for each slot */
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.room-slot:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.room-slot.selected {
+    border-color: #007bff;
+    background-color: #e7f3ff;
+}
+
+.room-slot h4 {
+    margin: 0;
+    color: #5b2a8c;
+}
+
+.room-slot p {
+    margin: 5px 0 0;
+    color: #555;
+}
+
+input[type="datetime-local"] {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+    margin-top: 20px;
+
+}
+
+.logout-btn {
+    background-color: #dc3545;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+.success {
+    color: green;
+    margin-top: 10px;
+}

@@ -1,0 +1,116 @@
+/* AdminDashboard.css */
+
+/* Container for the dashboard */
+.dashboard-container {
+    position: relative; /* Position relative to allow absolute positioning of the pseudo-element */
+    max-width: 1200px; /* Max width for the container */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add some padding inside the container */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    overflow: hidden; /* Hide any overflow from the pseudo-element */
+}
+
+/* Blur effect overlay */
+.dashboard-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Light white background for the blur effect */
+    backdrop-filter: blur(10px); /* Apply the blur effect */
+    z-index: -1; /* Ensure it is behind the content */
+}
+
+/* Ensure content is above the blur effect */
+.admin-dashboard-container {
+    position: relative; /* To keep content above the pseudo-element */
+    width: 100%; /* Adjusted for the container width */
+    font-family: Arial, sans-serif;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+.booking-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow-x: auto; /* Allows horizontal scrolling on small screens */
+}
+
+.booking-table th, .booking-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.booking-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.booking-table td {
+    vertical-align: middle;
+}
+
+.booking-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #cc0000;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button.active {
+    background-color: #0056b3;
+}
+
+.pagination button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .booking-table th, .booking-table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .pagination button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}

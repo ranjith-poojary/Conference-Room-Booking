@@ -1,0 +1,77 @@
+/* Apply styles only to the landing container */
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    background-image: url('../image311.jpg'); /* Set your image path here */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    color: #000; /* Black text color */
+}
+
+/* Specific styles for the landing header */
+.landing-header {
+    color: #000; /* Black color for the header text */
+    opacity: 0; /* Initially hide the element */
+    animation: fadeInUp 2s ease-out forwards; /* Apply animation */
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); /* Start from below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at the normal position */
+    }
+}
+
+/* Button container to align buttons */
+.button-container {
+    margin-top: 20px;
+}
+
+/* Common button style */
+.button {
+    display: block;
+    margin: 10px auto;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    transition: background-color 0.3s ease;
+}
+
+/* Sign Up button style */
+.sign-up {
+    background-color: rgba(124, 78, 255, 0.8);
+    color: #fff;
+}
+
+/* Sign In button style */
+.sign-in {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #7c4eff;
+}
+
+/* Admin button style */
+.admin {
+    background-color: rgba(243, 156, 18, 0.8);
+    color: #fff;
+}
+
+/* Button hover effects */
+.button:hover {
+    opacity: 0.9;
+}

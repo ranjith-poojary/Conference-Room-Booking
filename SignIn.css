@@ -1,0 +1,120 @@
+/* SignIn.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.signin-container {
+    background-color: white;
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.signin-header {
+    background-color: #003366; /* Dark blue background */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.signin-header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.signin-header img {
+    width: 50px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.signin-form {
+    padding: 20px;
+}
+
+.signin-form input[type="text"], .signin-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.signin-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #FF5733; /* Orange-red button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signin-form button:hover {
+    background-color: #e04b2d;
+}
+
+.signin-footer {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.signin-footer a {
+    color: #003366; /* Dark blue */
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.signin-footer a:hover {
+    text-decoration: underline;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.form-options input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+@media (max-width: 400px) {
+    .signin-container {
+        width: 90%;
+    }
+
+    .signin-header h2 {
+        font-size: 20px;
+    }
+
+    .signin-form input[type="text"], .signin-form input[type="password"] {
+        font-size: 14px;
+    }
+
+    .signin-form button {
+        font-size: 14px;
+    }
+}
